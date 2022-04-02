@@ -1,0 +1,24 @@
+{
+	"extends": "next/core-web-vitals",
+	"rules": {
+		"no-await-in-loop": "error",
+		"no-empty-pattern": "error",
+		"no-mixed-spaces-and-tabs": "error",
+		"max-len": [
+			"error",
+			{
+				"code": 100,
+				"tabWidth": 4,
+				"ignoreComments": true,
+				"ignoreUrls": true
+			}
+		],
+		"jsx-quotes": ["error", "prefer-single"],
+		"no-trailing-spaces": [
+			"error",
+			{
+				"skipBlankLines": true
+			}
+		]
+	}
+}
