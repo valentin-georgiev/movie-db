@@ -1,19 +1,27 @@
-import type { AppProps } from 'next/app';
 import App from 'next/app';
 import Head from 'next/head';
 import { END } from 'redux-saga';
-
 import { wrapper } from '../store/store';
 
+import Layout from '@components/Layout';
+import { SagaStore, App as AppProps } from 'types';
+
+import '../styles/globals.scss';
+
 const MyApp = ({ Component, pageProps }: AppProps) => (
-	<>
-		<Head>
-			<meta charSet = 'utf-8' />
-            <meta httpEquiv = 'x-ua-compatible' content = 'ie=edge' />
-			<title> Movie DB </title>
-		</Head>
-		<Component {...pageProps} />;
-	</>
+    <>
+        <Head>
+            <meta charSet = 'utf-8' />
+            <meta
+                httpEquiv = 'x-ua-compatible'
+                content = 'ie=edge'
+            />
+            <title>Movie DB</title>
+        </Head>
+        <Layout>
+            <Component {...pageProps} />
+        </Layout>
+    </>
 )
 
 MyApp.getInitialProps = wrapper.getInitialAppProps((store) => async (appContext) => {
@@ -25,7 +33,7 @@ MyApp.getInitialProps = wrapper.getInitialAppProps((store) => async (appContext)
     if (ctx.req && !Component.isHavingSSR) {
         store.dispatch(END);
 
-        await store.sagaTask.toPromise();
+        await (store as SagaStore).sagaTask.toPromise();
     }
 
     const pageProps = await App.getInitialProps(appContext);

@@ -4,12 +4,11 @@ import { wrapper } from '../store/store';
 import { TestActions } from '../store/actions/test';
 
 const HomePage: NextPage = () => {
-	return <div>Initial project create</div>;
+    return <div>Initial project create</div>;
 };
 
-export const getServerSideProps = wrapper.getServerSideProps((store) => async (ctx) => {
+export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {
     const test = store.dispatch(TestActions.testSaga());
-	console.log(test, 'test');
 
     store.dispatch(END);
 

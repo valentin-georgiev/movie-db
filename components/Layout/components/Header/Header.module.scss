@@ -1,0 +1,95 @@
+@import 'styles/mixins/container.scss';
+
+.header {
+    background-color: $dark-blue;
+    padding: 12px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.35s;
+    transition-delay: 0.5s;
+
+    &__hidden {
+        top: -70px;
+    }
+
+    &__container {
+        @include container;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo > a {
+        font-family: $font-family-bold;
+        text-transform: uppercase;
+        font-size: 30px;
+        background: linear-gradient(to right, rgba($light-green, 1) 0%, rgba($light-blue, 1) 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: center;
+
+        >li {
+            padding: 10px 8px;
+            position: relative;
+
+            >a {
+                font-family: $font-family-semibold;
+                font-size: 16px;
+                color: $white;
+                transition: 0.3s;
+            }
+
+            &:hover {
+                >a {
+                    color: $light-green;
+                }
+
+                .header__navigation-dropdown {
+                    display: block;
+                }
+            }
+
+            &:first-child .header__navigation-dropdown {
+                left: 0;
+            }
+
+            &:nth-child(2) .header__navigation-dropdown {
+                right: 0;
+            }
+        }
+    }
+
+    &__navigation-dropdown {
+        display: none;
+        background-color: $white;
+        border-radius: 6px;
+        width: 170px;
+        overflow: hidden;
+        padding: 8px 0;
+        position: absolute;
+        top: 38px;
+        box-shadow: 0 1px 3px rgba($black, 0.3);
+
+        a {
+            display: block;
+            width: 100%;
+            color: $black;
+            background-color: transparent;
+            font-family: $font-family;
+            font-size: 14px;
+            padding: 4px 15px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $dirty-white;
+            }
+        }
+    }
+}
