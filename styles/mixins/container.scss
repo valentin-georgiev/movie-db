@@ -1,0 +1,17 @@
+@mixin container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include large-desktop {
+        max-width: 1280px;
+    }
+
+    @include small-desktop {
+        max-width: 1024px;
+    }
+
+    @include large-tablet {
+        max-width: 740px;
+    }
+}

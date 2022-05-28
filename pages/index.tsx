@@ -1,19 +1,18 @@
-import type { NextPage } from 'next';
 import { END } from 'redux-saga';
-import { wrapper } from '../store/store';
-import { TestActions } from '../store/actions/test';
+import { wrapper } from 'project/store/store';
+import { SagaStore, Page } from 'project/types';
+import { TestActions } from '../project/store/actions/test';
 
-const HomePage: NextPage = () => {
-	return <div>Initial project create</div>;
+const HomePage: Page = () => {
+    return <div>Initial project create</div>;
 };
 
-export const getServerSideProps = wrapper.getServerSideProps((store) => async (ctx) => {
-    const test = store.dispatch(TestActions.testSaga());
-	console.log(test, 'test');
+export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {
+    store.dispatch(TestActions.testSaga());
 
     store.dispatch(END);
 
-    await store.sagaTask.toPromise();
+    await (store as SagaStore).sagaTask.toPromise();
 
     return { props: {} };
 });
