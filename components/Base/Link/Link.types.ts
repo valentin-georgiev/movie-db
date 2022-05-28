@@ -1,5 +1,6 @@
 export type LinkProps = {
     href: string;
-    text: string,
-    className?: string
+    text: string;
+    className?: string;
+    purpose?: string;
 }

@@ -3,7 +3,8 @@
 		"baseUrl": ".",
 		"paths": {
 			"@components/*": ["components/*"],
-			"@store/*": ["store/*"]
+			"@store/*": ["project/store/*"],
+			"@utils/*": ["project/utils/*"]
 		},
 		"target": "es5",
 		"lib": ["dom", "dom.iterable", "esnext"],
@@ -20,6 +21,6 @@
 		"isolatedModules": true,
 		"jsx": "preserve"
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js"],
 	"exclude": ["node_modules"]
 }

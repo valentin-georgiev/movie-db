@@ -1,78 +1,79 @@
 {
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "no-await-in-loop": "error",
-    "no-empty-pattern": "error",
-    "no-mixed-spaces-and-tabs": "error",
-    "max-len": [
-      "error",
-      {
-        "code": 100,
-        "tabWidth": 4,
-        "ignoreComments": true,
-        "ignoreUrls": true
-      }
-    ],
-    "jsx-quotes": ["error", "prefer-single"],
-    "no-trailing-spaces": [
-      "error",
-      {
-        "skipBlankLines": true
-      }
-    ],
-    "no-unused-vars": [
-      "error",
-      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
-    ],
-    "no-duplicate-imports": 1,
-    "no-empty": "error",
-    "comma-spacing": ["error", { "before": false, "after": true }],
-    "react/jsx-max-props-per-line": [1],
-    "camelcase": 0,
-    "consistent-return": 0,
-    "no-use-before-define": 0,
-    "import/prefer-default-export": 0,
-    "react/jsx-equals-spacing": ["error", "always"],
-    "indent": [
-      "error",
-      4,
-      {
-        "SwitchCase": 1,
-        "ignoredNodes": [
-          "JSXElement",
-          "JSXElement > *",
-          "JSXAttribute",
-          "JSXIdentifier",
-          "JSXNamespacedName",
-          "JSXMemberExpression",
-          "JSXSpreadAttribute",
-          "JSXExpressionContainer",
-          "JSXOpeningElement",
-          "JSXClosingElement",
-          "JSXText",
-          "JSXEmptyExpression",
-          "JSXSpreadChild"
-        ]
-      }
-    ],
-    "react/jsx-indent": ["error", 4],
-    "react/jsx-indent-props": ["error", 4],
-    "react/forbid-prop-types": 0,
-    "react/jsx-filename-extension": 0,
-    "react/jsx-one-expression-per-line": 0,
-    "react/jsx-pascal-case": 0,
-    "react/no-array-index-key": 0, // there are valid cases for this where a key can not be determined
-    "react/no-unescaped-entities": 0, // there are valid cases for this where a key can not be determined
-    "react/require-default-props": 0,
-    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "react/function-component-definition": 0,
-    "react/prop-types": 0,
-    "react/react-in-jsx-scope": 0,
-    "import/no-named-as-default": 0,
-    "import/extensions": 0,
-    "linebreak-style": 0,
-    "no-restricted-globals": 0
-  }
+	"extends": "next/core-web-vitals",
+	"ignorePatterns": ["./jest.config.js", "./next.config.js"],
+	"rules": {
+		"no-await-in-loop": "error",
+		"no-empty-pattern": "error",
+		"no-mixed-spaces-and-tabs": "error",
+		"max-len": [
+			0,
+			{
+				"code": 100,
+				"tabWidth": 4,
+				"ignoreComments": true,
+				"ignoreUrls": true
+			}
+		],
+		"jsx-quotes": ["error", "prefer-single"],
+		"no-trailing-spaces": [
+			"error",
+			{
+				"skipBlankLines": true
+			}
+		],
+		"no-unused-vars": [
+			"error",
+			{ "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+		],
+		"no-duplicate-imports": 1,
+		"no-empty": "error",
+		"comma-spacing": ["error", { "before": false, "after": true }],
+		"react/jsx-max-props-per-line": [1],
+		"camelcase": 0,
+		"consistent-return": 0,
+		"no-use-before-define": 0,
+		"import/prefer-default-export": 0,
+		"react/jsx-equals-spacing": ["error", "always"],
+		"indent": [
+			"error",
+			4,
+			{
+				"SwitchCase": 1,
+				"ignoredNodes": [
+					"JSXElement",
+					"JSXElement > *",
+					"JSXAttribute",
+					"JSXIdentifier",
+					"JSXNamespacedName",
+					"JSXMemberExpression",
+					"JSXSpreadAttribute",
+					"JSXExpressionContainer",
+					"JSXOpeningElement",
+					"JSXClosingElement",
+					"JSXText",
+					"JSXEmptyExpression",
+					"JSXSpreadChild"
+				]
+			}
+		],
+		"react/jsx-indent": ["error", 4],
+		"react/jsx-indent-props": ["error", 4],
+		"react/forbid-prop-types": 0,
+		"react/jsx-filename-extension": 0,
+		"react/jsx-one-expression-per-line": 0,
+		"react/jsx-pascal-case": 0,
+		"react/no-array-index-key": 0, // there are valid cases for this where a key can not be determined
+		"react/no-unescaped-entities": 0, // there are valid cases for this where a key can not be determined
+		"react/require-default-props": 0,
+		"import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+		"react-hooks/rules-of-hooks": "error",
+		"react-hooks/exhaustive-deps": "error",
+		"react/function-component-definition": 0,
+		"react/prop-types": 0,
+		"react/react-in-jsx-scope": 0,
+		"import/no-named-as-default": 0,
+		"import/extensions": 0,
+		"linebreak-style": 0,
+		"no-restricted-globals": 0
+	}
 }

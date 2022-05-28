@@ -4,9 +4,15 @@ import { LinkProps } from "./Link.types";
 export const LinkComponent = ({
     href = '#',
     text,
-    className
+    className,
+    purpose,
 }: LinkProps) => (
     <Link href = {href}>
-        <a className = {className}>{text}</a>
+        <a
+            className = {className}
+            data-testid = {`Link__${purpose}`}
+        >
+            {text}
+        </a>
     </Link>
 )
