@@ -1,10 +1,12 @@
 import { END } from 'redux-saga';
 import { wrapper } from 'project/store/store';
 import { SagaStore, Page } from 'project/types';
-import { TestActions } from '../project/store/actions/test';
+import { TestActions } from '@store/actions/test';
+
+import PageIntro from '@components/Base/PageIntro';
 
 const HomePage: Page = () => {
-    return <div>Initial project create</div>;
+    return <PageIntro />
 };
 
 export const getServerSideProps = wrapper.getServerSideProps((store) => async () => {

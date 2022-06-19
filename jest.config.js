@@ -10,8 +10,7 @@ const config = {
 
 		/* Handle component imports with @ */
 		"^@components(.*)$": "<rootDir>/components$1",
-		"^@store(.*)$": "<rootDir>/store$1",
-		"^@utils(.*)$": "<rootDir>/utils$1",
+		"^@project(.*)$": "<rootDir>/project$1",
 	},
 	testPathIgnorePatterns: ["<rootDir>/node_modules/", "<rootDir>/.next/"],
 	testEnvironment: "jsdom",

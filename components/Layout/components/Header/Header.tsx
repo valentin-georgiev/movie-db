@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import classnames from 'classnames';
 
-import { convertToPascalCase } from 'project/utils/formatUtils';
-import { useEffectOnMount } from 'project/utils/customHooks/useEffectOnMount';
+import { convertToPascalCase } from '@project/utils/formatUtils';
+import { useEffectOnMount } from '@project/utils/customHooks/useEffectOnMount';
 
 import Link from "@components/Base/Link";
 import { headerNavItems } from './headerItems';

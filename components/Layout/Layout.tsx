@@ -1,8 +1,16 @@
 import Header from "./components/Header";
+import { LayoutProps } from "./Layout.types";
 
-export const Layout = ({ children }) => (
+import styles from './Layout.module.scss';
+
+export const Layout = ({ children }: LayoutProps): JSX.Element => (
     <>
         <Header />
-        {children}
+        <div
+            className = {styles.main}
+            data-testid = 'Container__MainLayout'
+        >
+            {children}
+        </div>
     </>
 )

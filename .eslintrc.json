@@ -1,6 +1,6 @@
 {
 	"extends": "next/core-web-vitals",
-	"ignorePatterns": ["./jest.config.js", "./next.config.js"],
+	"ignorePatterns": ["./jest.config.js", "./next.config.js", "./jest-setup.js"],
 	"rules": {
 		"no-await-in-loop": "error",
 		"no-empty-pattern": "error",
