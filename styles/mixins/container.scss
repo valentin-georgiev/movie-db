@@ -11,7 +11,7 @@
         max-width: 1024px;
     }
 
-    @include large-tablet {
-        max-width: 740px;
+    @include tablet {
+        padding: 0 30px;
     }
 }
